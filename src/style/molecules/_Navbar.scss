@@ -1,0 +1,19 @@
+.Navbar {
+  background-color: $fourthColor;
+  height: 40px;
+  display: flex;
+  align-items: center;
+
+  &__link {
+    margin: 0 4px;
+    text-decoration: none;
+    transition: $short-transition color;
+    $color: $primaryColor;
+
+    &--active {
+      $color: $secondaryColor;
+      transition: $short-transition color;
+      border-bottom: 1px solid $secondaryColor;
+    }
+  }
+}

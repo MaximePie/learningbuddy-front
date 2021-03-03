@@ -2,16 +2,15 @@ import React from "react";
 import Login from './components/pages/Login';
 import {BrowserRouter, NavLink, Route, Switch} from "react-router-dom";
 import {routes} from "./services/routes";
+import Navbar from "./components/molecules/Navbar";
 
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <div>
-          <NavLink to={routes.HOME}>Accueil</NavLink>
-          <NavLink to={routes.LOGIN}>Login</NavLink>
-          <NavLink to={routes.SIGNIN}>Sign in</NavLink>
-        </div>
+        <Navbar>
+
+        </Navbar>
         <Switch>
           <Route path={routes.HOME} exact>
             Bienvenue à l'accueil

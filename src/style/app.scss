@@ -5,7 +5,15 @@
 // Importing Pages
 @import "Login";
 
+// Importing Molecules
+@import "molecules/Navbar";
+
 
 // Importing Atoms
 @import "atoms/Button";
 @import "atoms/Textfield";
+
+
+body, #root {
+  margin: 0;
+}
