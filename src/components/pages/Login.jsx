@@ -8,20 +8,26 @@ export default function Login() {
 
   return (
     <div className="Login">
-      <h1>Connexion</h1>
-      <form onSubmit={handleSubmit(handleFormSubmit)}>
-        <Textfield
-          name="username"
-          register={register({required: true})}
-          label="Identifiant"
-        />
-        <Textfield
-          name="password"
-          register={register({required: true})}
-          label="Mot de passe"
-        />
-        <Button onClick={() => {}} text="Se connecter"/>
-      </form>
+      <h1 className="Login__header">Learning Buddy</h1>
+      <div className="Login__card">
+        <h2>Connexion</h2>
+        <form
+          onSubmit={handleSubmit(handleFormSubmit)}
+          className="Login__form"
+        >
+          <Textfield
+            name="username"
+            register={register({required: true})}
+            label="Identifiant"
+          />
+          <Textfield
+            name="password"
+            register={register({required: true})}
+            label="Mot de passe"
+          />
+          <Button onClick={() => {}} text="Se connecter"/>
+        </form>
+      </div>
     </div>
   );
 

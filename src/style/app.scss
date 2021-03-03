@@ -3,7 +3,7 @@
 @import "colors";
 
 // Importing Pages
-@import "Login";
+@import "pages/Login";
 
 // Importing Molecules
 @import "molecules/Navbar";
@@ -16,4 +16,12 @@
 
 body, #root {
   margin: 0;
+}
+
+.App {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 40px 1fr;
+
+  background-color: $primaryColor;
 }
