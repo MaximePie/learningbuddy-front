@@ -1,6 +1,7 @@
 import React from 'react';
 import {useForm} from "react-hook-form";
 import Button from "../atoms/Button";
+import Textfield from "../atoms/Textfield";
 
 export default function Login() {
   const {register, handleSubmit} = useForm();
@@ -9,21 +10,15 @@ export default function Login() {
     <div className="Login">
       <h1>Connexion</h1>
       <form onSubmit={handleSubmit(handleFormSubmit)}>
-        <input
+        <Textfield
           name="username"
-          type="text"
-          defaultValue=""
-          ref={register({
-            required: true,
-          })}
+          register={register({required: true})}
+          label="Identifiant"
         />
-        <input
+        <Textfield
           name="password"
-          type="password"
-          defaultValue=""
-          ref={register({
-            required: true,
-          })}
+          register={register({required: true})}
+          label="Mot de passe"
         />
         <Button onClick={() => {}} text="Se connecter"/>
       </form>
