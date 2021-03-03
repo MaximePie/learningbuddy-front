@@ -1,6 +1,6 @@
 import React from "react";
 import Login from './components/pages/Login';
-import {BrowserRouter, NavLink, Route, Switch} from "react-router-dom";
+import {BrowserRouter, Route, Switch} from "react-router-dom";
 import {routes} from "./services/routes";
 import Navbar from "./components/molecules/Navbar";
 
@@ -8,12 +8,10 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <Navbar>
-
-        </Navbar>
+        <Navbar/>
         <Switch>
           <Route path={routes.HOME} exact>
-            Bienvenue à l'accueil
+            <h1>Bienvenue</h1>
           </Route>
           <Route path={routes.LOGIN}>
             <Login/>

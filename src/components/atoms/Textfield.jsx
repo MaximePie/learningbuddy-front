@@ -13,6 +13,7 @@ export default function Textfield({name, type, defaultValue, label, register}) {
           defaultValue={defaultValue}
           ref={register({
             required: true,
+            name
           })}
         />
       </label>
@@ -20,10 +21,9 @@ export default function Textfield({name, type, defaultValue, label, register}) {
   );
 }
 
-
 Textfield.propTypes = {
   name: PropTypes.string.isRequired,
-  register: PropTypes.string.isRequired,
+  register: PropTypes.func.isRequired,
   type: PropTypes.string,
   defaultValue: PropTypes.string,
   label: PropTypes.string.isRequired,

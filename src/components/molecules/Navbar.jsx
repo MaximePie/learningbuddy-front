@@ -25,7 +25,7 @@ export default function Navbar() {
         activeClassName="Navbar__link--active"
         to={routes.SIGNIN}
       >
-        Sign in
+        S'inscrire
       </NavLink>
     </div>
   );
