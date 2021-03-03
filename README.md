@@ -17,3 +17,4 @@ Lancez les commandes suivantes :
 1. [React Router](https://reactrouter.com/web/guides/quick-start), qui permet de naviguer entre les différentes page de l'application
 2. [Node-sass](https://stackoverflow.com/questions/64625050/error-node-sass-version-5-0-0-is-incompatible-with-4-0-0), qui permet de styliser de manière plus modulaire et plus rapide.
 3. [Proptypes](https://www.npmjs.com/package/prop-types), qui permettent de typer les props et ainsi éviter des erreurs additionnelles.
+4. [React-hook-form](https://react-hook-form.com/get-started), qui permet de gérer les formulaires en React plus facilement avec les hooks.
