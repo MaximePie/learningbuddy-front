@@ -1,5 +1,6 @@
 import React from 'react';
 import {useForm} from "react-hook-form";
+import Button from "../atoms/Button";
 
 export default function Login() {
   const {register, handleSubmit} = useForm();
@@ -24,7 +25,7 @@ export default function Login() {
             required: true,
           })}
         />
-        <button>Se connecter</button>
+        <Button onClick={() => {}} text="Se connecter"/>
       </form>
     </div>
   );

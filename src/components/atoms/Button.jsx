@@ -1,9 +1,14 @@
 import React from 'react';
 
-export default function Component(props) {
+import {PropTypes} from 'prop-types';
+
+Button.propTypes = {
+  onClick: PropTypes.func.isRequired,
+  text: PropTypes.string,
+};
+
+export default function Button({onClick, text}) {
   return (
-    <div className="">
-      C'est le component
-    </div>
+    <button className="Button" onClick={onClick}>{text}</button>
   );
 }
