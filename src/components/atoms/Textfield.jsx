@@ -11,10 +11,7 @@ export default function Textfield({name, type, defaultValue, label, register}) {
           name={name}
           type={type}
           defaultValue={defaultValue}
-          ref={register({
-            required: true,
-            name
-          })}
+          ref={register}
         />
       </label>
     </div>
