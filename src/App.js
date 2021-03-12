@@ -3,6 +3,7 @@ import Login from './components/pages/Login';
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 import {routes} from "./services/routes";
 import Navbar from "./components/molecules/Navbar";
+import Register from "./components/pages/Register";
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
             <Login/>
           </Route>
           <Route path={routes.SIGNIN}>
-            S'inscrire arrive bientôt. Patience !
+            <Register/>
           </Route>
         </Switch>
       </div>

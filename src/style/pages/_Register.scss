@@ -1,0 +1,27 @@
+.Register {
+  text-align: center;
+
+  &__card {
+    width: 400px;
+    height: 300px;
+
+    margin: auto;
+    border: solid $grey 1px;
+    border-radius: 4px;
+    padding: 8px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: $white;
+  }
+
+  &__form {
+    text-align: center;
+
+    .Textfield {
+      align-items: start;
+      margin-bottom: 24px;
+    }
+  }
+}
