@@ -5,16 +5,23 @@
   width: 200px;
   margin-bottom: 8px;
 
+  &__label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   &__input {
     height: 24px;
     border: none;
     border-bottom: solid 1px $grey;
     outline: none;
     transition: $short-transition border-color;
-    background-color: $white;
+    background: none;
+
 
     &:focus {
-      border-color: $secondaryColorLight;
+      border-color: $secondaryColor;
       transition: $short-transition border-color;
     }
   }

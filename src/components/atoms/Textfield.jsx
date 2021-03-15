@@ -4,7 +4,7 @@ import {PropTypes} from 'prop-types';
 export default function Textfield({name, type, defaultValue, label, register}) {
   return (
     <div className="Textfield">
-      <label htmlFor={name}>
+      <label htmlFor={name} className="Textfield__label">
         {label}
         <input
           className="Textfield__input"

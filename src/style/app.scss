@@ -1,3 +1,6 @@
+// Importing fonts
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
 // Importing Variables
 @import "variables";
 @import "colors";
@@ -13,6 +16,7 @@
 // Importing Atoms
 @import "atoms/Button";
 @import "atoms/Textfield";
+@import "atoms/BackgroundIllustration";
 
 
 body, #root {
@@ -23,5 +27,5 @@ body, #root {
   height: 100vh;
   display: grid;
   grid-template-rows: 40px 1fr;
-  background: radial-gradient(circle, rgba(246,246,246,1) 0%, rgba(255,255,255,1) 100%);
+  font-family: $lato;
 }
