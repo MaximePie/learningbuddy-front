@@ -8,7 +8,6 @@ import axios from "axios";
 const url = "http://localhost:8000";
 
 export default function Register() {
-  // const {register, handleSubmit} = useForm();
   const { register, handleSubmit } = useForm();
 
   return (

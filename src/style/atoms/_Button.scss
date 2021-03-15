@@ -5,12 +5,12 @@
   border-radius: 4px;
   border: none;
   outline: none;
-  background-color: $secondaryColor;
+  background-color: $primaryColor;
   transition: $short-transition background;
 
   &:hover {
     transition: $short-transition background;
-    background-color: $secondaryColorLight;
+    background-color: $primaryColorLight;
     cursor: pointer;
   }
 }
