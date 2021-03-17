@@ -23,11 +23,13 @@ export default function Register() {
             name="email"
             register={register({required: true})}
             label="Email"
+            type="email"
           />
           <Textfield
             name="password"
             register={register({required: true})}
             label="Mot de passe"
+            type="password"
           />
           <Button onClick={() => {handleSubmit(handleFormSubmit)}} text="Je crée mon compte"/>
         </form>
