@@ -19,11 +19,13 @@ export default function Login() {
             name="email"
             register={register({required: true})}
             label="Email"
+            type="email"
           />
           <Textfield
             name="password"
             register={register({required: true})}
             label="Mot de passe"
+            type="password"
           />
           <Button onClick={() => {}} text="Se connecter"/>
         </form>
