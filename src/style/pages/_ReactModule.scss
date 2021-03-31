@@ -1,4 +1,9 @@
 .ReactModule {
   min-height: 100vh;
   background: $white;
+
+  &__section {
+    min-height: 30%;
+    height: 30vh;
+  }
 }
