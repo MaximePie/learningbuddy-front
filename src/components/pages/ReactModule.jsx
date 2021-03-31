@@ -3,6 +3,7 @@ import reactBanner from "../../images/reactBanner.jpeg";
 import ReactFlow from "react-flow-renderer";
 
 import LinkedNode from "../molecules/LinkedNode";
+import DefaultNode from "../molecules/DefaultNode";
 
 export default function ReactModule() {
   const customTypes = {
@@ -11,23 +12,29 @@ export default function ReactModule() {
   const elements = [
     {
       id: '1',
-      type: 'input', // input node
-      data: { label: 'Input Node' },
-      position: { x: 250, y: 25 },
+      type: 'input',
+      data: { label:  <DefaultNode text="Choisissez un chapitre et un exercice" step={1}/>},
+      position: { x: 0, y: 25 },
+      sourcePosition: 'right'
     },
-    // default node
     {
       id: '2',
-      // you can also pass a React component as a label
-      type: 'linkedNode',
-      data: { url: "haha.com", icon: "youtube", text: "Corrigez-vous grâce aux vidéos Youtube" },
-      position: { x: 100, y: 125 },
+      type: 'default',
+      data: { label: <DefaultNode step={2} text="Lisez les instructions"/> },
+      position: { x: 300, y: 0 },
+      targetPosition: 'left',
+      sourcePosition: 'right'
     },
     {
       id: '3',
-      type: 'output', // output node
-      data: { label: 'Output Node' },
-      position: { x: 250, y: 250 },
+      // you can also pass a React component as a label
+      type: 'linkedNode',
+      data: {
+        url: "https://youtube.com/playlist?list=PLxPhnioBp0U15Q3HOkrvgpU_e2aL3PAh3",
+        icon: "youtube",
+        text: "Corrigez-vous grâce aux vidéos Youtube"
+      },
+      position: { x: 900, y: 50 },
     },
     { id: 'e1-2', source: '1', target: '2', animated: true},
     { id: 'e2-3', source: '2', target: '3', animated: true },
@@ -48,7 +55,11 @@ export default function ReactModule() {
             <ReactFlow
               elements={elements}
               nodeTypes={customTypes}
+              defaultZoom={1.5}
             />
+          </div>
+          <div className="ReactModule__section">
+            <h2>Choisissez un chapitre !</h2>
           </div>
         </div>
       </div>

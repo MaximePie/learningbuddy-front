@@ -22,9 +22,9 @@ export default function LinkedNode({ data }) {
       />
       <div className="LinkedNode__body">
         <i className={`fas fab fa-${icon} LinkedNode__icon`}/>
-        <span className="LinkedNode__text">
+        <a href={url} className="LinkedNode__text">
           {text}
-        </span>
+        </a>
       </div>
       <Handle
         type="source"

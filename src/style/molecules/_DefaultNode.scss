@@ -1,0 +1,14 @@
+.DefaultNode {
+  display: flex;
+  border-color: $primaryColor;
+  align-items: center;
+
+  &__number {
+    font-size: 14px;
+    margin: 6px;
+    color: $primaryColor;
+    padding: 0 4.5px;
+    border: solid 1px $primaryColor;
+    border-radius: 50px;
+  }
+}
