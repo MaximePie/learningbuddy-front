@@ -1,8 +1,10 @@
 import React from "react";
+import "@fortawesome/fontawesome-free/js/all.min";
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 import {routes} from "./services/routes";
 import Navbar from "./components/molecules/Navbar";
 import BackgroundIllustration from "./components/atoms/BackgroundIllustration";
+import ReactModule from "./components/pages/ReactModule";
 
 function App() {
   return (
@@ -12,7 +14,7 @@ function App() {
         <Navbar/>
         <Switch>
           <Route path={routes.HOME} exact>
-            <h1>Bienvenue</h1>
+            <ReactModule/>
           </Route>
         </Switch>
       </div>
