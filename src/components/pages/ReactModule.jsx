@@ -2,42 +2,79 @@ import React from 'react';
 import reactBanner from "../../images/reactBanner.jpeg";
 import ReactFlow from "react-flow-renderer";
 
-import LinkedNode from "../molecules/LinkedNode";
 import DefaultNode from "../molecules/DefaultNode";
 
 export default function ReactModule() {
-  const customTypes = {
-    linkedNode: LinkedNode,
-  };
   const elements = [
     {
       id: '1',
       type: 'input',
-      data: { label:  <DefaultNode text="Choisissez un chapitre et un exercice" step={1}/>},
-      position: { x: 0, y: 25 },
+      data: {label:  <DefaultNode
+          text="Choisissez un chapitre et un exercice"
+          image="search"
+        />},
+      position: { x: 0, y: 10 },
       sourcePosition: 'right'
     },
     {
       id: '2',
       type: 'default',
-      data: { label: <DefaultNode step={2} text="Lisez les instructions"/> },
-      position: { x: 300, y: 0 },
+      data: { label: <DefaultNode
+          text="Consultez la démo"
+          image="youtube"
+          url="https://www.youtube.com/playlist?list=PLxPhnioBp0U15Q3HOkrvgpU_e2aL3PAh3"
+        /> },
+      position: { x: 200, y: 10 },
       targetPosition: 'left',
       sourcePosition: 'right'
     },
     {
       id: '3',
-      // you can also pass a React component as a label
-      type: 'linkedNode',
-      data: {
-        url: "https://youtube.com/playlist?list=PLxPhnioBp0U15Q3HOkrvgpU_e2aL3PAh3",
-        icon: "youtube",
-        text: "Corrigez-vous grâce aux vidéos Youtube"
-      },
-      position: { x: 900, y: 50 },
+      type: 'default',
+      data: { label: <DefaultNode image="tools" text="Pratiquez"/> },
+      position: { x: 400, y: 10 },
+      targetPosition: 'left',
+      sourcePosition: 'right'
+    },
+    {
+      id: '4',
+      type: 'default',
+      data: { label: <DefaultNode
+          text="Corrigez-vous à l'aide des vidéos"
+          image="youtube"
+          url="https://www.youtube.com/playlist?list=PLxPhnioBp0U15Q3HOkrvgpU_e2aL3PAh3"
+        /> },
+      position: { x: 600, y: 10 },
+      targetPosition: 'left',
+      sourcePosition: 'right'
+    },
+    {
+      id: '5',
+      type: 'default',
+      data: { label: <DefaultNode
+          text="Lisez le résumé"
+          image="github"
+          url="https://github.com/MaximePie/react-entrainement/blob/master/README.md#sommaire"
+        /> },
+      position: { x: 800, y: 10 },
+      targetPosition: 'left',
+      sourcePosition: 'right'
+    },
+    {
+      id: '6',
+      type: 'output',
+      data: { label: <DefaultNode
+          text="Appliquez vos connaissances dans vos propres projets"
+          image="medal"
+        /> },
+      position: { x: 1000, y: 10 },
+      targetPosition: 'left',
     },
     { id: 'e1-2', source: '1', target: '2', animated: true},
     { id: 'e2-3', source: '2', target: '3', animated: true },
+    { id: 'e3-4', source: '3', target: '4', animated: true },
+    { id: 'e4-5', source: '4', target: '5', animated: true },
+    { id: 'e5-6', source: '5', target: '6', animated: true },
   ];
 
   return (
@@ -54,7 +91,6 @@ export default function ReactModule() {
             <h2><i className="fas fa-question-circle"/> Comment pratiquer ?</h2>
             <ReactFlow
               elements={elements}
-              nodeTypes={customTypes}
               defaultZoom={1.5}
             />
           </div>

@@ -2,6 +2,10 @@
   display: flex;
   border-color: $primaryColor;
   align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  margin: 1em;
 
   &__number {
     font-size: 14px;
@@ -10,5 +14,18 @@
     padding: 0 4.5px;
     border: solid 1px $primaryColor;
     border-radius: 50px;
+  }
+
+  &__icon {
+    margin-right: 4px;
+  }
+
+  .fa-youtube {
+    color: red;
+  }
+
+  .fa-medal {
+    color: $primaryColor;
+    font-size: 1.25em;
   }
 }
