@@ -13,20 +13,6 @@ export default function Navbar() {
       >
         Accueil
       </NavLink>
-      <NavLink
-        className="Navbar__link"
-        activeClassName="Navbar__link--active"
-        to={routes.LOGIN}
-      >
-        Login
-      </NavLink>
-      <NavLink
-        className="Navbar__link"
-        activeClassName="Navbar__link--active"
-        to={routes.SIGNIN}
-      >
-        S'inscrire
-      </NavLink>
     </div>
   );
 }
