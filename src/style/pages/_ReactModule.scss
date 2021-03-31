@@ -1,9 +1,38 @@
 .ReactModule {
   min-height: 100vh;
   background: $white;
+  display: grid;
+  grid-template-rows: 300px 1fr;
+
+  &__banner-container {
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  &__banner {
+    width: 100%;
+    position: absolute;
+    top: -120px;
+  }
+
+  &__header {
+    &-icon {
+      margin-right: 8px;
+      color: #02d8ff;
+    }
+  }
+
+  &__content {
+    padding: 0 4em;
+  }
 
   &__section {
     min-height: 30%;
     height: 30vh;
+  }
+
+  .fa-question-circle {
+    color: $secondaryColor;
   }
 }
