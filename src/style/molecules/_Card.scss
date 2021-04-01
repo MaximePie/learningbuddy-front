@@ -1,0 +1,12 @@
+.Card {
+  background: $primaryCardBackground;
+  border-radius: 4px;
+  padding: 8px 16px;
+  width: 200px;
+  color: $white;
+  box-shadow: $elevated;
+
+  &__title {
+
+  }
+}
