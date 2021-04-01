@@ -6,7 +6,21 @@
   color: $white;
   box-shadow: $elevated;
 
-  &__title {
+  &__lesson {
+    &-link {
+      color: white;
+    }
 
+    &-icon {
+      margin-right: 4px;
+    }
+
+    .fa-youtube {
+      color: red;
+    }
+
+    .fa-github {
+      color: black;
+    }
   }
 }

@@ -1,11 +1,17 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import reactBanner from "../../images/reactBanner.jpeg";
 import ReactFlow from "react-flow-renderer";
-import Card from "../molecules/Card";
+import ChapterCard from "../molecules/ChapterCard";
+import axios from "axios";
 
 import DefaultNode from "../molecules/DefaultNode";
+const url = "http://127.0.0.1:4001/chapters";
 
 export default function ReactModule() {
+  const [chapters, setChapters] = React.useState([]);
+
+  useEffect(fetchLessons, []);
+
   return (
     <div className="ReactModule">
       <div className="ReactModule__banner-container">
@@ -26,18 +32,24 @@ export default function ReactModule() {
           <div className="ReactModule__section">
             <h2>Choisissez un chapitre !</h2>
             <div>
-              <Card title="1 - Syntaxe JSX">
-                <p>Niveau 1</p>
-                <p>Niveau 2</p>
-                <p>Niveau 3</p>
-                <p>Niveau 4</p>
-              </Card>
+              {chapters.map((chapter, index) => (
+                <ChapterCard key={index} chapter={chapter}/>
+              ))}
             </div>
           </div>
         </div>
       </div>
     </div>
   );
+
+  /**
+   * Fetch the lessons and set it
+   */
+  function fetchLessons() {
+    axios.get(url).then(response => {
+      setChapters(response.data.chapters);
+    })
+  }
 
   /**
    *
